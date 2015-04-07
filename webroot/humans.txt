@@ -1,0 +1,1 @@
+Opal is a PHP-boilerplate/framework for small websites. Opal was built by Maria Jonsson as part of a web programming course.
