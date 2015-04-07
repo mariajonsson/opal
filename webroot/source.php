@@ -28,7 +28,7 @@ EOD;
 $opal['main'] = "<h1>Visa källkod</h1>\n" . $source->View(); 
  
 $opal['footer'] = <<<EOD
-<footer><span class='sitefooter'>Copyright (c) Maria Jonsson | <a href='https://github.com/mosbth/Anax-base'>Anax på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
+<footer><span class='sitefooter'>Copyright (c) Maria Jonsson | <a href='https://github.com/mariajonsson/opal'>Opal på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
 EOD;
  
  
