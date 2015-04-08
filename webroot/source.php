@@ -32,5 +32,5 @@ $opal['footer'] = <<<EOD
 EOD;
  
  
-// Finally, leave it all to the rendering phase of Anax.
+// Finally, leave it all to the rendering phase of Opal.
 include(OPAL_THEME_PATH);

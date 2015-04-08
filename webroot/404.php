@@ -3,7 +3,7 @@
  * This is an Opal pagecontroller.
  *
  */
-// Include the essential config-file which also creates the $anax variable with its defaults.
+// Include the essential config-file which also creates the $opal variable with its defaults.
 include(__DIR__.'/config.php'); 
  
  
@@ -17,5 +17,5 @@ $opal['footer'] = "";
 header("HTTP/1.0 404 Not Found");
  
  
-// Finally, leave it all to the rendering phase of Anax.
+// Finally, leave it all to the rendering phase of Opal.
 include(OPAL_THEME_PATH);
