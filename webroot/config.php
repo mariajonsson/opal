@@ -175,7 +175,7 @@ $opal['navbar'] = array(
  * Theme related settings.
  *
  */
-$opal['stylesheets'] = array('css/style.css');
+$opal['stylesheets'] = array('css/style.css','css/source.css','css/figure.css');
 $opal['favicon']    = 'favicon.ico';
 
 /**
