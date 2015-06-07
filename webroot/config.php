@@ -91,7 +91,7 @@ $opal['adminbar'] = array(
       'url'   => 'admin.php',  
        'title' => 'Admin page'
         ),
-  
+
 
   
   ),
@@ -141,7 +141,12 @@ $opal['navbar'] = array(
       'title' => 'Hello page'
     ),
 
-   
+       // This is a menu item
+     'gallery'  => array(
+      'text'  => 'Gallery',   
+      'url'   => 'gallery.php',  
+       'title' => 'Gallery demo'
+        ),
       
      
      
@@ -175,7 +180,7 @@ $opal['navbar'] = array(
  * Theme related settings.
  *
  */
-$opal['stylesheets'] = array('css/style.css','css/source.css','css/figure.css');
+$opal['stylesheets'] = array('css/style.css','css/source.css','css/figure.css','css/breadcrumb.css','css/gallery.css');
 $opal['favicon']    = 'favicon.ico';
 
 /**
