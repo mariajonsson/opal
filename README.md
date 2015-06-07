@@ -12,7 +12,7 @@ Contents
 
 *    config.php
      The webroot catalogue contains the config.php file.
-     Config lets you change, amongst other things, the header, footer and navigation meny.
+     Config lets you change (amongst other things) the header, footer and navigation menu.
      A template for admin menu and regular menu are included in the config file.
 
 *    hello.php 
@@ -52,7 +52,7 @@ This catalogue is used by img.php, to store different versions of images. Make s
      
 ### src
 
-Add modules here. Some basic ones are included. 
+Add modules here. Some useful ones are included. 
 
 *    CDatabase
      Support for database
