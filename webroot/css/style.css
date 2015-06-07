@@ -1,17 +1,72 @@
+
 /**
  * General elements
  */
+
+html {
+    overflow-y: scroll;
+}
+
 body {
   color: #333;
-  font-family: arial, sans-serif;
+  font-family: verdana, helvetica, sans-serif;
+  font-size: 14px;
+  
 }
+
+a {
+	color: #F16E98;
+	text-decoration:none;
+}
+
+a.selected {
+    color: black;
+    font-style: italic;
+  
+}
+
+a:hover {
+	color: #F16E98;
+}
+a:visited {
+	color: #F16E98;
+	
+}
+
+a.morelink {
+  font-size: 0.9em;
+  
+}
+
+
+
+span.discreet, p.discreet {
+  font-size: 0.8em;
+  color: grey;
+} 
+
+
+
+h1, h2, h3, h4 {
+  font-family: Arial, sans-serif;
+  
+}
+
+
+
+section {
+  
+  margin-bottom: 3em;
+}
+
+
  
 /**
  * Layout of the main page elements 
  */
 #wrapper {
   margin: 0 auto;
-  width: 980px; 
+  width: 900px; 
   padding: 10px;
 }
  
@@ -20,24 +75,44 @@ body {
  * Layout for header
  */
 #header {
+  vertical-align: middle;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.sitetitleslogan {
+   display: inline-block;
+    left: 70px;
+    position: relative;
+    top: 0px;
+    vertical-align: bottom;
+    width: 300px;
+    
 }
  
 .sitetitle {
-  position: absolute;
-  top: 6px;
-  left: 130px;
-  font-size: 48px;
+  font-size: 3em;
+  font-family: Arial;
+   
 }
  
 .siteslogan {
-  position: absolute;
-  top: 65px;
-  left: 130px;
-  font-style: italic;
+
   color: #666;
+ 
+  
 }
+
+.sitelogo {
+  vertical-align: bottom;
+  position: relative;
+  
+  z-index: -1;
+  
+}
+
+
  
  
 /**
@@ -55,8 +130,274 @@ body {
   margin-top: 40px;
   border-top: 1px solid #ccc;
   padding-top: 15px;
+  clear:both;
 }
  
 .sitefooter {
   color: #666;
 }
+
+
+/**
+ * Layout for navigation
+ */
+
+div#navbar {
+  clear: both;
+  height: 40px;
+  width: 100%;
+  font-size:1.1em;
+  margin-top: 15px;
+  font-family: Arial;
+
+}
+
+div#adminbar {
+  background-color: #000000;
+  border-bottom: 1px solid #000000;
+  height: 25px;
+  width: 100%;
+  font-size:0.95em;
+  position: fixed;
+  top:0px;
+  left:0px;
+  margin-top: 0px;
+  padding-top: 5px;
+  z-index: 5;
+}
+  
+
+
+
+.navbar {
+
+	display: block;
+	margin-left: 0px;
+	padding:0px;
+	width: 100%;
+}
+
+.navbar ul {
+  
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+
+}
+
+.adminbar ul {
+  width: 100%;
+  list-style: none; 
+  margin-top: 0;
+  margin-left: 25px;
+  padding: 0;
+
+}
+
+
+
+ 
+/* to style the submenu, start by hiding it using absolute positioning */
+.navbar ul ul, .adminbar ul ul {
+  background-color: transparent; 
+  padding: 8px; 
+  position: absolute; 
+  left: -9999px; 
+  z-index: 2;
+  margin-right: 0px;
+  margin-left: 0px;
+
+}
+ 
+/* Display the submenu when hovering the list element, absolute positioning */
+
+.navbar li.selected ul,
+.navbar li.selected-parent ul
+{
+  background-color: transparent;
+  top: 15px;
+  left: -9999px;
+}
+
+.navbar li:hover ul,
+.adminbar li:hover ul
+{
+  top: 20px;
+  left: 0;
+  background-color: #fefefe;
+  z-index: 3;
+}
+.adminbar li:hover ul
+{
+  top: 16px;
+  z-index: 1;
+  background-color: #000000;
+
+}
+
+.adminbar li:hover ul {
+  top: 16px;
+  
+}
+ 
+
+
+.navbar li, .adminbar li {
+	margin-left: 0px;
+	display: inline-block;
+	position: relative; /* to place the drop-down menu correctly */
+	padding: 0px;
+	margin-bottom: 0.5em;
+
+}
+
+.navbar li {
+  margin-right: 25px;
+
+}
+.adminbar li {
+  margin-right: 10px;
+
+}
+
+.navbar ul ul li, .adminbar ul ul li {
+	display: block;
+	position: relative; /* to place the drop-down menu correctly */
+	margin-right: 1px;
+}
+
+.navbar a {
+	color: #55C2C6;
+	white-space: nowrap;  /*to make the drop-down menu items stay on one row */
+	
+	
+}
+
+.adminbar a {
+  line-height: 1.3em;
+  color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;  /*to make the drop-down menu items stay on one row */
+	
+}
+
+.navbar a:hover {
+	color: #55C2C6;
+}
+.navbar a:visited {
+	color:#55C2C6;
+}
+
+.navbar li li a {
+	
+	color: #55C2C6;
+	white-space: nowrap;  /*to make the drop-down menu items stay on one row */
+	font-size: 0.9em;
+}
+
+.navbar li.selected li a {
+    border-bottom: none;
+  
+}
+
+/* style items of the menu/submenu when hovering and selected */
+.navbar ul > li:hover > a,
+.navbar ul > li.selected > a, 
+.navbar ul > li.selected-parent > a
+{
+  color: #55C2C6;
+  border-bottom: 4px solid #050505;
+  position: relative;
+  z-index: 4;
+}
+
+.adminbar ul > li:hover > a,
+.adminbar ul > li.selected > a, 
+.adminbar ul > li.selected-parent > a
+{
+  color: #ffffff;
+  border-bottom: 4px solid #5EC2CB;
+  position: relative;
+  z-index: 4;
+}
+
+.navbar li li:hover a,
+.navbar li.selected li:hover a,
+.navbar li li.selected a 
+{
+
+  border-bottom: 3px solid #050505;
+}
+
+.adminbar li li:hover a,
+.adminbar li.selected li:hover a,
+.adminbar li li.selected a 
+{
+
+  border-bottom: 3px solid #5EC2CB;
+}
+
+ul#usernav {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul#usernav li {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 15px;
+  
+}
+
+ul#usernav li a.selected {
+  border-bottom: 3px solid #000000;
+  font-style: normal;
+}
+
+
+
+/* Tables */
+
+table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 100%;
+	
+}
+
+tbody {
+	padding: 0px;
+}
+
+td {
+	border: 1px solid lightgrey;
+	border-right: 0px solid white;
+	border-left: 0px solid white;
+	padding: 3px;
+}
+
+
+
+
+
+/**
+ * Forms
+ * 
+ **/
+
+fieldset {
+  border: 0px;
+  
+}
+
+fieldset.inlinefieldset {
+  vertical-align: top;
+  display: inline;
+}
+
+
+label {
+  
+  font-size:0.95em;
+}
+
