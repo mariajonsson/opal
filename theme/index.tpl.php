@@ -10,8 +10,9 @@
 <?php endforeach; ?>
 <script src='<?=$modernizr?>'></script>
 </head>
-<body>
+<body <?php if(isset($bodyid)): ?> id='<?=$bodyid?>'<?php endif; ?>>
   <div id='wrapper'>
+    <?php if(isset($adminbar)): ?><div id='adminbar'><?=get_navbar($adminbar)?></div><?php endif; ?>
     <div id='header'><?=$header?></div>
     <?php if(isset($navbar)): ?><div id='navbar'><?=get_navbar($navbar)?></div><?php endif; ?>
     <div id='main'><?=$main?></div>
